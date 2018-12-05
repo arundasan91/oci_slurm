@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -N 1
+#SBATCH -p gpuq
+#SBATCH -C c4140,p100
+#SBATCH --gres=gpu:4
+
+WORK_DIR=$HOME/projects/
+cd $WORK_DIR
+
+module load shared rengan/tensorflow/1.10.0
+
+python3.6 2-Linear-Regression.py
