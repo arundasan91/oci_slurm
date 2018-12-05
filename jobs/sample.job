@@ -5,7 +5,7 @@
 #SBATCH -C c4140,p100
 #SBATCH --gres=gpu:4
 
-WORK_DIR=$HOME/projects/
+WORK_DIR=$HOME/projects/test/
 cd $WORK_DIR
 
 module load shared rengan/tensorflow/1.10.0
